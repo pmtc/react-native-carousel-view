@@ -3,8 +3,8 @@
  */
 import React, {Component} from 'react';
 import {
-  ViewPagerAndroid,
-} from 'react-native';
+  ViewPager,
+} from '@react-native-community/viewpager';
 
 type Props = {
   width: number,
@@ -17,7 +17,7 @@ type Props = {
 }
 
 export default class CarouselPager extends Component {
-  viewPager: ViewPagerAndroid
+  viewPager: ViewPager
   props: Props
 
   state: {
@@ -72,7 +72,7 @@ export default class CarouselPager extends Component {
   render() {
     const {children, contentContainerStyle, width, height} = this.props;
     return (
-      <ViewPagerAndroid
+      <ViewPager
         ref={(viewPager) => {
           this.viewPager = viewPager;
         }}
@@ -82,7 +82,7 @@ export default class CarouselPager extends Component {
         onPageSelected={this._selectedPage}
       >
         {children}
-      </ViewPagerAndroid>
+      </ViewPager>
     );
   }
 }
