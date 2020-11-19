@@ -2,9 +2,7 @@
  * @flow
  */
 import React, {Component} from 'react';
-import {
-  ViewPager,
-} from '@react-native-community/viewpager';
+import ViewPager from '@react-native-community/viewpager';
 
 type Props = {
   width: number,
